@@ -43,7 +43,7 @@ app.post('/create-contact', function(req, res){
         name: req.body.name,
         phone: req.body.phone
     }, function(err, newContact){
-        if(err){console.log('Error in creating a contact!')
+        if(err){console.log('Error in adding task!')
             return;}
             console.log('******', newContact);
             return res.redirect('back');
@@ -68,7 +68,7 @@ app.get('/delete-contact', function(req, res){
     //find the contact in the database using id 
     Contact.findOneAndDelete(id, function(err){
         if(err){
-        console.log('Error in deleting the contact');
+        console.log('Error in deleting the Task');
         return;
     }
     
